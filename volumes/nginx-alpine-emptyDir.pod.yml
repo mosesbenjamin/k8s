@@ -1,10 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-nginx
-  labels:
-    app: my-nginx
-    rel: stable
+  name: emptyDir-volume
 spec:
   containers:
   - name: nginx
