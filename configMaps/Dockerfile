@@ -1,4 +1,4 @@
 FROM node:alpine
-LABEL author="Dan Wahlin"
+LABEL author="Benjamin"
 COPY server.js /server.js
 ENTRYPOINT ["node", "server.js"]
