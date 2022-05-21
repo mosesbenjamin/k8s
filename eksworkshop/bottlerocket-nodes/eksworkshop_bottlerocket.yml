@@ -1,0 +1,34 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eksworkshop-eksctl
+  region: us-east-2
+  version: "1.19"
+
+availabilityZones: ["us-east-2a", "us-east-2b", "us-east-2c"]
+
+nodeGroups:
+  - name: ng-bottlerocket
+    labels: { role: bottlerocket }
+    instanceType: t2.small
+    desiredCapacity: 3
+    amiFamily: Bottlerocket
+    iam:
+       attachPolicyARNs:
+          - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+          - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+          - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+          - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+    bottlerocket:
+      settings:
+        motd: "Hello from eksctl!"
+
+# To enable all of the control plane logs, uncomment below:
+# cloudWatch:
+#  clusterLogging:
+#    enableTypes: ["*"]
+
+secretsEncryption:
+  keyARN: arn:aws:kms:us-east-2:975095063495:key/e151ee49-70e4-4f4f-89d3-7956f8578f96
