@@ -1,0 +1,42 @@
+{
+    "VpcPeeringConnection": {
+        "AccepterVpcInfo": {
+            "CidrBlock": "192.168.0.0/16",
+            "CidrBlockSet": [
+                {
+                    "CidrBlock": "192.168.0.0/16"
+                }
+            ],
+            "OwnerId": "975095063495",
+            "PeeringOptions": {
+                "AllowDnsResolutionFromRemoteVpc": false,
+                "AllowEgressFromLocalClassicLinkToRemoteVpc": false,
+                "AllowEgressFromLocalVpcToRemoteClassicLink": false
+            },
+            "VpcId": "vpc-07cc7a9fd793de157",
+            "Region": "us-east-2"
+        },
+        "RequesterVpcInfo": {
+            "CidrBlock": "172.31.0.0/16",
+            "CidrBlockSet": [
+                {
+                    "CidrBlock": "172.31.0.0/16"
+                }
+            ],
+            "OwnerId": "975095063495",
+            "PeeringOptions": {
+                "AllowDnsResolutionFromRemoteVpc": false,
+                "AllowEgressFromLocalClassicLinkToRemoteVpc": false,
+                "AllowEgressFromLocalVpcToRemoteClassicLink": false
+            },
+            "VpcId": "vpc-010772464218f68d1",
+            "Region": "us-east-2"
+        },
+        "Status": {
+            "Code": "provisioning",
+            "Message": "Provisioning"
+        },
+        "Tags": [],
+        "VpcPeeringConnectionId": "pcx-099bc0f6569c2c6b2"
+    }
+}
